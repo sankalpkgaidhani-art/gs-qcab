@@ -349,6 +349,14 @@ button.danger:hover {
 
 }
 
+.question input[type="checkbox"]:disabled {
+
+    cursor: not-allowed;
+
+    opacity: 0.5;
+
+}
+
 .question-meta {
 
     font-size: 13px;
@@ -997,54 +1005,54 @@ button.danger:hover {
 
 <div id="loginForm">
 
-    <label for="loginEmail">Email</label>
+<label for="loginEmail">Email</label>
 
-    <input
-        type="email"
-        id="loginEmail"
-        placeholder="Enter your email"
-        autocomplete="email"
-    >
+<input
+    type="email"
+    id="loginEmail"
+    placeholder="Enter your email"
+    autocomplete="email"
+>
 
-    <label for="loginPassword">Password</label>
+<label for="loginPassword">Password</label>
 
-    <input
-        type="password"
-        id="loginPassword"
-        placeholder="Enter your password"
-        autocomplete="current-password"
-    >
+<input
+    type="password"
+    id="loginPassword"
+    placeholder="Enter your password"
+    autocomplete="current-password"
+>
+
+<button
+    id="loginButton"
+    type="button"
+    style="width: 100%;"
+>
+    Login
+</button>
+
+<div class="auth-links">
 
     <button
-        id="loginButton"
+        id="showSignupButton"
         type="button"
-        style="width: 100%;"
     >
-        Login
+        Create a new account
     </button>
 
-    <div class="auth-links">
+    <br>
 
-        <button
-            id="showSignupButton"
-            type="button"
-        >
-            Create a new account
-        </button>
-
-        <br>
-
-        <button
-            id="forgotPasswordButton"
-            type="button"
-        >
-            Forgot password?
-        </button>
-
-    </div>
+    <button
+        id="forgotPasswordButton"
+        type="button"
+    >
+        Forgot password?
+    </button>
 
 </div>
 
+
+</div>
 
 <!-- =========================
      SIGNUP FORM
@@ -1052,44 +1060,46 @@ button.danger:hover {
 
 <div id="signupForm" class="hidden">
 
-    <h3 style="text-align:center;">Create Account</h3>
 
-    <label for="signupEmail">Email</label>
+<h3 style="text-align:center;">Create Account</h3>
 
-    <input
-        type="email"
-        id="signupEmail"
-        placeholder="Enter your email"
-        autocomplete="email"
-    >
+<label for="signupEmail">Email</label>
 
-    <label for="signupPassword">Password</label>
+<input
+    type="email"
+    id="signupEmail"
+    placeholder="Enter your email"
+    autocomplete="email"
+>
 
-    <input
-        type="password"
-        id="signupPassword"
-        placeholder="Create a password"
-        autocomplete="new-password"
-    >
+<label for="signupPassword">Password</label>
+
+<input
+    type="password"
+    id="signupPassword"
+    placeholder="Create a password"
+    autocomplete="new-password"
+>
+
+<button
+    id="signupButton"
+    type="button"
+    style="width: 100%;"
+>
+    Create Account
+</button>
+
+<div class="auth-links">
 
     <button
-        id="signupButton"
+        id="backToLoginButton"
         type="button"
-        style="width: 100%;"
     >
-        Create Account
+        Already have an account? Login
     </button>
 
-    <div class="auth-links">
+</div>
 
-        <button
-            id="backToLoginButton"
-            type="button"
-        >
-            Already have an account? Login
-        </button>
-
-    </div>
 
 </div>
 
@@ -1097,22 +1107,23 @@ button.danger:hover {
 
 </div>
 
-
 <!-- =========================
      UPGRADE TO PREMIUM
 ========================== -->
 
 <button
-    id="upgradePremiumButton"
-    type="button"
-    onclick="window.location.href='premium.html';"
-    style="display: none;"
+id="upgradePremiumButton"
+type="button"
+onclick="window.location.href='premium.html';"
+style="display: none;"
+
 >
 
-    Upgrade to Premium
+
+Upgrade to Premium
+
 
 </button>
-
 
 <!-- =========================
      LOGOUT
@@ -1120,16 +1131,17 @@ button.danger:hover {
 
 <div id="logoutContainer" style="display: none;">
 
-    <button id="logoutButton" type="button">
-        Logout
-    </button>
 
-    <div class="creator-credit">
-        Made by Sankalp10_04
-    </div>
+<button id="logoutButton" type="button">
+    Logout
+</button>
 
+<div class="creator-credit">
+    Made by Sankalp10_04
 </div>
 
+
+</div>
 
 <!-- =========================
      MAIN QCAB GENERATOR
@@ -1142,410 +1154,401 @@ button.danger:hover {
 
 <div class="container">
 
-    <h1>GS QCAB Generator</h1>
 
-    <p class="subtitle">
-        Generate UPSC GS Question-Cum-Answer Booklets
-    </p>
+<h1>GS QCAB Generator</h1>
 
-
-    <!-- =========================
-         PLAN MESSAGE
-    ========================== -->
-
-    <div
-        id="planMessage"
-        class="plan-message"
-        style="display: none;"
-    ></div>
+<p class="subtitle">
+    Generate UPSC GS Question-Cum-Answer Booklets
+</p>
 
 
-    <!-- MODE -->
+<!-- =========================
+     PLAN MESSAGE
+========================== -->
 
-    <div class="card">
+<div
+    id="planMessage"
+    class="plan-message"
+    style="display: none;"
+></div>
 
-        <h3>Selection Mode</h3>
 
-        <div class="mode-row">
+<!-- MODE -->
 
-            <button
-                id="topicModeButton"
-                class="mode-button active"
-                type="button"
-            >
-                Topic-wise
-            </button>
+<div class="card">
 
-            <button
-                id="yearModeButton"
-                class="mode-button"
-                type="button"
-            >
-                Year-wise
-            </button>
+    <h3>Selection Mode</h3>
 
-            <button
-                id="customModeButton"
-                class="mode-button"
-                type="button"
-            >
-                Add Own Questions
-            </button>
+    <div class="mode-row">
 
-        </div>
+        <button
+            id="topicModeButton"
+            class="mode-button active"
+            type="button"
+        >
+            Topic-wise
+        </button>
+
+        <button
+            id="yearModeButton"
+            class="mode-button"
+            type="button"
+        >
+            Year-wise
+        </button>
 
     </div>
 
+</div>
 
-    <!-- FILTERS -->
 
-    <div
-        class="card"
-        id="filterCard"
-    >
+<!-- FILTERS -->
 
-        <h3>Choose Questions</h3>
+<div
+    class="card"
+    id="filterCard"
+>
 
-        <label for="paperSelect">
-            GS Paper
+    <h3>Choose Questions</h3>
+
+    <label for="paperSelect">
+        GS Paper
+    </label>
+
+    <select id="paperSelect">
+
+        <option value="">
+            Select Paper
+        </option>
+
+        <option value="GS1">
+            GS1
+        </option>
+
+        <option value="GS2">
+            GS2
+        </option>
+
+        <option value="GS3">
+            GS3
+        </option>
+
+    </select>
+
+
+    <!-- TOPIC FILTER -->
+
+    <div id="topicSection">
+
+        <label for="topicSelect">
+            Topic
         </label>
 
-        <select id="paperSelect">
+        <select id="topicSelect">
 
             <option value="">
-                Select Paper
+                Select Topic
             </option>
-
-            <option value="GS1">
-                GS1
-            </option>
-
-            <option value="GS2">
-                GS2
-            </option>
-
-            <option value="GS3">
-                GS3
-            </option>
-
-            
 
         </select>
 
-
-        <!-- TOPIC FILTER -->
-
-        <div id="topicSection">
-
-            <label for="topicSelect">
-                Topic
-            </label>
-
-            <select id="topicSelect">
-
-                <option value="">
-                    Select Topic
-                </option>
-
-            </select>
-
-        </div>
+    </div>
 
 
-        <!-- YEAR FILTER -->
+    <!-- YEAR FILTER -->
 
-        <div id="yearSection">
+    <div id="yearSection">
 
-            <label for="yearSelect">
-                Year
-            </label>
+        <label for="yearSelect">
+            Year
+        </label>
 
-            <select id="yearSelect">
+        <select id="yearSelect">
 
-                <option value="">
-                    Select Year
-                </option>
+            <option value="">
+                Select Year
+            </option>
 
-            </select>
-
-        </div>
-
-
-        <div class="button-row">
-
-            <button
-                id="loadQuestions"
-                type="button"
-            >
-                Load Questions
-            </button>
-
-        </div>
+        </select>
 
     </div>
 
 
-    <!-- QUESTIONS -->
+    <div class="button-row">
 
-    <div
-        class="card"
-        id="questionsCard"
-        style="display:none;"
-    >
-
-        <h3>Select Questions</h3>
-
-        <div class="button-row">
-
-            <button
-                id="selectAll"
-                type="button"
-            >
-                Select All
-            </button>
-
-            <button
-                id="clearAll"
-                type="button"
-                class="secondary"
-            >
-                Clear All
-            </button>
-
-        </div>
-
-
-        <div
-            id="selectedCount"
-            class="selected-count"
+        <button
+            id="loadQuestions"
+            type="button"
         >
-            Selected: 0
-        </div>
+            Load Questions
+        </button>
 
-        <div id="questionsList"></div>
+    </div>
+
+</div>
+
+
+<!-- QUESTIONS -->
+
+<div
+    class="card"
+    id="questionsCard"
+    style="display:none;"
+>
+
+    <h3>Select Questions</h3>
+
+    <div class="button-row">
+
+        <button
+            id="selectAll"
+            type="button"
+        >
+            Select All
+        </button>
+
+        <button
+            id="clearAll"
+            type="button"
+            class="secondary"
+        >
+            Clear All
+        </button>
 
     </div>
 
 
-    <!-- =========================
-         CUSTOM QUESTIONS
-    ========================== -->
-
     <div
-        class="card"
-        id="customQuestionsCard"
-        style="display:none;"
+        id="selectedCount"
+        class="selected-count"
     >
+        Selected: 0
+    </div>
 
-        <h3>Add Your Own Questions</h3>
+    <div id="questionsList"></div>
 
-        <div class="custom-question-panel">
-
-            <form id="customQuestionForm" novalidate>
-
-                <div class="custom-field">
-
-                    <label for="customQuestionText">
-                        Question
-                    </label>
-
-                    <div
-                        class="custom-editor-toolbar"
-                        role="toolbar"
-                        aria-label="Question tools"
-                    >
-
-                        <button
-                            type="button"
-                            id="clearQuestionButton"
-                            class="custom-toolbar-button"
-                        >
-                            Clear
-                        </button>
-
-                        <span class="custom-toolbar-help">
-                            Type text or paste text and images directly into the question box.
-                        </span>
-
-                    </div>
-
-                    <div
-                        id="customQuestionText"
-                        class="custom-rich-editor"
-                        contenteditable="true"
-                        role="textbox"
-                        aria-multiline="true"
-                        data-placeholder="Enter your question...type text or paste text and images directly into the question box."
-                    ></div>
-
-                </div>
+</div>
 
 
-                <div class="custom-fields-row">
+<!-- =========================
+     CUSTOM QUESTIONS
+========================== -->
 
-                    <div class="custom-field">
+<div
+    class="card"
+    id="customQuestionsCard"
+    style="display:none;"
+>
 
-                        <label for="customMarks">
-                            Marks
-                        </label>
+    <h3>Add Your Own Questions</h3>
 
-                        <input
-                            id="customMarks"
-                            type="number"
-                            min="1"
-                            max="1000"
-                            step="1"
-                            value="10"
-                            required
-                        >
+    <div class="custom-question-panel">
 
-                    </div>
+        <form id="customQuestionForm" novalidate>
 
+            <div class="custom-field">
 
-                    <div class="custom-field">
-
-                        <label for="customPages">
-                            Answer Pages
-                        </label>
-
-                        <input
-                            id="customPages"
-                            type="number"
-                            min="1"
-                            max="100"
-                            step="1"
-                            value="2"
-                            required
-                        >
-
-                        <small>
-                            Exact answer space in the PDF.
-                        </small>
-
-                    </div>
-
-
-                    <div class="custom-field">
-
-                        <label for="customWordLimit">
-                            Word Limit <span>(optional)</span>
-                        </label>
-
-                        <input
-                            id="customWordLimit"
-                            type="number"
-                            min="1"
-                            max="10000"
-                            step="1"
-                            placeholder="e.g. 150"
-                        >
-
-                    </div>
-
-                </div>
-
+                <label for="customQuestionText">
+                    Question
+                </label>
 
                 <div
-                    id="customQuestionError"
-                    class="custom-error"
-                    role="alert"
-                ></div>
-
-
-                <div class="custom-form-actions">
-
-                    <button
-                        type="submit"
-                        id="addCustomQuestion"
-                        class="custom-primary-button"
-                    >
-                        + Add Question
-                    </button>
+                    class="custom-editor-toolbar"
+                    role="toolbar"
+                    aria-label="Question tools"
+                >
 
                     <button
                         type="button"
-                        id="cancelCustomEdit"
-                        class="custom-secondary-button"
-                        style="display:none;"
+                        id="clearQuestionButton"
+                        class="custom-toolbar-button"
                     >
-                        Cancel
+                        Clear
                     </button>
 
-                </div>
-
-            </form>
-
-
-            <div class="custom-question-list">
-
-                <div class="custom-list-header">
-
-                    <div>
-
-                        <h3>Your Questions</h3>
-
-                        <span id="customQuestionCount">
-                            0 questions
-                        </span>
-
-                    </div>
-
-                    <div
-                        id="customTotals"
-                        class="custom-totals"
-                    ></div>
+                    <span class="custom-toolbar-help">
+                        Type text or paste text and images directly into the question box.
+                    </span>
 
                 </div>
 
-                <div id="customQuestionItems"></div>
+                <div
+                    id="customQuestionText"
+                    class="custom-rich-editor"
+                    contenteditable="true"
+                    role="textbox"
+                    aria-multiline="true"
+                    data-placeholder="Enter your question...type text or paste text and images directly into the question box."
+                ></div>
 
             </div>
 
+
+            <div class="custom-fields-row">
+
+                <div class="custom-field">
+
+                    <label for="customMarks">
+                        Marks
+                    </label>
+
+                    <input
+                        id="customMarks"
+                        type="number"
+                        min="1"
+                        max="1000"
+                        step="1"
+                        value="10"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="custom-field">
+
+                    <label for="customPages">
+                        Answer Pages
+                    </label>
+
+                    <input
+                        id="customPages"
+                        type="number"
+                        min="1"
+                        max="100"
+                        step="1"
+                        value="2"
+                        required
+                    >
+
+                    <small>
+                        Exact answer space in the PDF.
+                    </small>
+
+                </div>
+
+
+                <div class="custom-field">
+
+                    <label for="customWordLimit">
+                        Word Limit <span>(optional)</span>
+                    </label>
+
+                    <input
+                        id="customWordLimit"
+                        type="number"
+                        min="1"
+                        max="10000"
+                        step="1"
+                        placeholder="e.g. 150"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="customQuestionError"
+                class="custom-error"
+                role="alert"
+            ></div>
+
+
+            <div class="custom-form-actions">
+
+                <button
+                    type="submit"
+                    id="addCustomQuestion"
+                    class="custom-primary-button"
+                >
+                    + Add Question
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelCustomEdit"
+                    class="custom-secondary-button"
+                    style="display:none;"
+                >
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <div class="custom-question-list">
+
+            <div class="custom-list-header">
+
+                <div>
+
+                    <h3>Your Questions</h3>
+
+                    <span id="customQuestionCount">
+                        0 questions
+                    </span>
+
+                </div>
+
+                <div
+                    id="customTotals"
+                    class="custom-totals"
+                ></div>
+
+            </div>
+
+            <div id="customQuestionItems"></div>
+
         </div>
 
     </div>
 
+</div>
 
-    <!-- GENERATE -->
 
-    <div
-        class="card"
-        id="generateCard"
-        style="display:none;"
+<!-- GENERATE -->
+
+<div
+    class="card"
+    id="generateCard"
+    style="display:none;"
+>
+
+    <h3>Generate QCAB</h3>
+
+    <p id="generateDescription">
+        Generate a PDF containing the selected questions
+        followed by answer-writing pages.
+    </p>
+
+    <button
+        id="generateQCAB"
+        type="button"
     >
+        Generate QCAB PDF
+    </button>
 
-        <h3>Generate QCAB</h3>
-
-        <p id="generateDescription">
-            Generate a PDF containing the selected questions
-            followed by answer-writing pages.
-        </p>
+    <div style="margin-top:15px;">
 
         <button
-            id="generateQCAB"
+            id="downloadQCAB"
             type="button"
+            style="display:none;"
         >
-            Generate QCAB PDF
+            Download QCAB PDF
         </button>
-
-        <div style="margin-top:15px;">
-
-            <button
-                id="downloadQCAB"
-                type="button"
-                style="display:none;"
-            >
-                Download QCAB PDF
-            </button>
-
-        </div>
 
     </div>
 
 </div>
 
+
 </div>
 
+</div>
 
 <!-- =========================
      LIBRARIES
@@ -1556,7 +1559,6 @@ button.danger:hover {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 
 <!-- =========================
      SUPABASE + APP LOGIC
@@ -1569,14 +1571,13 @@ button.danger:hover {
 ========================================= */
 
 const API_URL =
-    "https://govhlwqbobforvprdlps.supabase.co/functions/v1/get-questions";
+    "https://uggewxzqnwjzhebfempx.supabase.co/functions/v1/get-questions";
 
 const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_lr04EFZActHWsuFS9S24QQ_ryPJMYFM";
+    "sb_publishable_xHqv4APZiUkYh0wSDO93zg_7y8_uHjP";
 
 const SUPABASE_URL =
-    "https://govhlwqbobforvprdlps.supabase.co";
-
+    "https://uggewxzqnwjzhebfempx.supabase.co";
 
 window.supabaseClient =
     supabase.createClient(
@@ -1634,13 +1635,11 @@ const paperITopics = [
     "TOPIC: DISTRIBUTION OF KEY NATURAL RESOURCES ACROSS THE WORLD (INCLUDING SOUTH ASIA AND THE INDIAN SUBCONTINENT)",
     "TOPIC: FACTORS RESPONSIBLE FOR THE LOCATION OF PRIMARY, SECONDARY, AND TERTIARY SECTOR INDUSTRIES IN VARIOUS PARTS OF THE WORLD (INCLUDING INDIA)"
 
-
 ];
 
 
 const paperIITopics = [
 
-    
     "Indian Constitution: Historical underpinnings, evolution, features, amendments, significant provisions and basic structure",
     "Functions and responsibilities of the Union and the States, Issues and challenges pertaining to the federal structure",
     "Devolution of powers and finances up to local levels and challenges",
@@ -1666,7 +1665,9 @@ const paperIITopics = [
     "India & World",
     "Act East",
     "Look West"
+
 ];
+
 
 const paperIIITopics = [
 
@@ -1695,6 +1696,11 @@ const paperIIITopics = [
 ];
 
 
+/* =========================================
+   YEARS
+   ALL AVAILABLE YEARS
+========================================= */
+
 const years = [
 
     2026,
@@ -1707,9 +1713,19 @@ const years = [
     2019,
     2018,
     2017,
-    2016
+    2016,
+    2015,
+    2014,
+    2013
 
 ];
+
+
+/* =========================================
+   CURRENT ACCESS LEVEL
+========================================= */
+
+let currentAccessLevel = "free";
 
 
 /* =========================================
@@ -1721,7 +1737,7 @@ function updatePlanMessage(accessLevel) {
     if (accessLevel === "free") {
 
         planMessage.textContent =
-            "Free Plan: You have access to 2026 questions only.";
+            "Free Plan: You can view questions from all available years. Only 2026 questions can be used to generate a QCAB.";
 
         planMessage.style.display = "block";
 
@@ -1730,7 +1746,7 @@ function updatePlanMessage(accessLevel) {
     } else if (accessLevel === "paid") {
 
         planMessage.textContent =
-            "Paid Plan: You have access to questions from all available years.";
+            "Paid Plan: You can view and generate QCABs from all available years.";
 
         planMessage.style.display = "block";
 
@@ -1739,7 +1755,7 @@ function updatePlanMessage(accessLevel) {
     } else if (accessLevel === "admin") {
 
         planMessage.textContent =
-            "Admin Access: You have full access to all available questions.";
+            "Admin Access: You can view and generate QCABs from all available years.";
 
         planMessage.style.display = "block";
 
@@ -1814,6 +1830,9 @@ async function checkUserAccess() {
 
         if (result.access_level) {
 
+            currentAccessLevel =
+                result.access_level;
+
             updatePlanMessage(
                 result.access_level
             );
@@ -1866,6 +1885,8 @@ async function updateAuthUI() {
         planMessage.style.display = "none";
 
         upgradePremiumButton.style.display = "none";
+
+        currentAccessLevel = "free";
 
         window.generatedPDF = null;
 
@@ -2235,9 +2256,6 @@ const topicModeButton =
 const yearModeButton =
     document.getElementById("yearModeButton");
 
-const customModeButton =
-    document.getElementById("customModeButton");
-
 
 const topicSection =
     document.getElementById("topicSection");
@@ -2290,7 +2308,7 @@ function showNormalMode() {
         currentMode === "year"
     );
 
-    customModeButton.classList.remove("active");
+    
 
 }
 
@@ -2315,8 +2333,6 @@ function showCustomMode() {
     topicModeButton.classList.remove("active");
 
     yearModeButton.classList.remove("active");
-
-    customModeButton.classList.add("active");
 
     renderCustomQuestionList();
 
@@ -2360,23 +2376,6 @@ yearModeButton
             yearSection.style.display = "block";
 
             showNormalMode();
-
-        }
-    );
-
-
-/* =========================================
-   CUSTOM MODE
-========================================= */
-
-customModeButton
-    .addEventListener(
-        "click",
-        function () {
-
-            currentMode = "custom";
-
-            showCustomMode();
 
         }
     );
@@ -2491,89 +2490,114 @@ years.forEach(
    FETCH QUESTIONS
 ========================================= */
 
-/* =========================================
-   FETCH QUESTIONS FROM LOCAL JSON
-   + AUTOMATIC DUPLICATE REMOVAL
-========================================= */
-
 async function fetchQuestions(filters) {
 
     try {
 
-        const response =
-            await fetch("questions.json");
+        /* =========================================
+           GET CURRENT LOGGED-IN SESSION
+        ========================================= */
 
-        if (!response.ok) {
-            throw new Error(
-                "questions.json could not be loaded. HTTP status: " +
-                response.status
+        const {
+            data: { session }
+        } =
+            await window.supabaseClient.auth.getSession();
+
+
+        if (!session) {
+
+            alert(
+                "Please login first."
             );
+
+            return [];
+
         }
-
-        const data =
-            await response.json();
-
-        const allQuestions =
-            data.questions_repository || [];
 
 
         /* =========================================
-           FILTER QUESTIONS
+           CALL SUPABASE EDGE FUNCTION
         ========================================= */
 
-        const filteredQuestions =
-            allQuestions.filter(
-                function (question) {
+        const response =
+            await fetch(
+                API_URL,
+                {
+                    method: "POST",
 
-                    /* PAPER FILTER */
+                    headers: {
 
-                    if (
-                        filters.paper &&
-                        question.paper !== filters.paper
-                    ) {
-                        return false;
-                    }
+                        "Content-Type":
+                            "application/json",
 
+                        "apikey":
+                            SUPABASE_PUBLISHABLE_KEY,
 
-                   /* TOPIC FILTER */
+                        "Authorization":
+                            "Bearer " +
+                            session.access_token
 
-if (filters.topic) {
+                    },
 
-    const normalizeTopic = function (topic) {
+                    body:
+                        JSON.stringify({
 
-        return String(topic || "")
-            .trim()
-            .replace(/[.;:]+$/, "")
-            .replace(/\s+/g, " ")
-            .toLowerCase();
+                            paper:
+                                filters.paper ||
+                                null,
 
-    };
+                            topic:
+                                filters.topic ||
+                                null,
 
-    if (
-        normalizeTopic(question.topic) !==
-        normalizeTopic(filters.topic)
-    ) {
-        return false;
-    }
+                            year:
+                                filters.year
+                                    ? Number(filters.year)
+                                    : null
 
-}
-
-
-                    /* YEAR FILTER */
-
-                    if (
-                        filters.year &&
-                        Number(question.year) !==
-                        Number(filters.year)
-                    ) {
-                        return false;
-                    }
-
-
-                    return true;
+                        })
 
                 }
             );
+
+
+        /* =========================================
+           READ RESPONSE
+        ========================================= */
+
+        const result =
+            await response.json();
+
+
+        /* =========================================
+           HANDLE SERVER ERROR
+        ========================================= */
+
+        if (!response.ok) {
+
+            console.error(
+                "get-questions error:",
+                result
+            );
+
+
+            alert(
+                result.error ||
+                "Unable to load questions."
+            );
+
+
+            return [];
+
+        }
+
+
+        /* =========================================
+           GET QUESTIONS
+        ========================================= */
+
+        const allQuestions =
+            result.questions || [];
 
 
         /* =========================================
@@ -2581,16 +2605,13 @@ if (filters.topic) {
 
            If the same question appears more than
            once, KEEP THE LATEST VERSION.
-
-           This is useful when we add corrected /
-           updated questions later.
         ========================================= */
 
         const uniqueQuestionsMap =
             new Map();
 
 
-        filteredQuestions.forEach(
+        allQuestions.forEach(
             function (question) {
 
                 const questionText =
@@ -2607,13 +2628,6 @@ if (filters.topic) {
                     "|" +
                     questionText;
 
-
-                /*
-                 * set() overwrites an earlier question
-                 * with the same key.
-                 *
-                 * Therefore the LAST version is kept.
-                 */
 
                 uniqueQuestionsMap.set(
                     duplicateKey,
@@ -2635,14 +2649,38 @@ if (filters.topic) {
         ========================================= */
 
         console.log(
-            "Questions before duplicate removal:",
-            filteredQuestions.length
+            "Questions received from Supabase:",
+            allQuestions.length
         );
+
 
         console.log(
             "Questions after duplicate removal:",
             uniqueQuestions.length
         );
+
+
+        console.log(
+            "Access level:",
+            result.access_level
+        );
+
+
+        /*
+         * Keep the access level synchronized with
+         * the latest server response.
+         */
+
+        if (result.access_level) {
+
+            currentAccessLevel =
+                result.access_level;
+
+            updatePlanMessage(
+                result.access_level
+            );
+
+        }
 
 
         return uniqueQuestions;
@@ -2653,13 +2691,15 @@ if (filters.topic) {
     catch (error) {
 
         console.error(
-            "Unable to load local questions:",
+            "Unable to load questions from Supabase:",
             error
         );
 
+
         alert(
-            "Unable to load questions.json. Please check that questions.json is in the same folder as index.html."
+            "Unable to connect to the question server. Please try again."
         );
+
 
         return [];
 
@@ -2890,6 +2930,7 @@ function displayQuestions(questions) {
                 JSON.stringify(question);
 
 
+
             checkbox.addEventListener(
                 "change",
                 updateSelectedCount
@@ -2971,8 +3012,39 @@ document
                 .forEach(
                     function (checkbox) {
 
-                        checkbox.checked =
-                            true;
+                        const question =
+                            JSON.parse(
+                                checkbox.dataset.question
+                            );
+
+
+                        /*
+                         * Free users:
+                         * select only 2026.
+                         *
+                         * Paid/Admin:
+                         * select every visible question.
+                         */
+
+                        if (
+                            currentAccessLevel === "free" &&
+                            Number(question.year) !== 2026
+                        ) {
+
+                            checkbox.checked =
+                                false;
+
+                            return;
+
+                        }
+
+
+                        if (!checkbox.disabled) {
+
+                            checkbox.checked =
+                                true;
+
+                        }
 
                     }
                 );
@@ -3044,21 +3116,56 @@ function updateSelectedCount() {
 window.getSelectedQuestions =
     function () {
 
-        return Array
-            .from(
-                document.querySelectorAll(
-                    ".question-checkbox:checked"
+        const selectedQuestions =
+            Array
+                .from(
+                    document.querySelectorAll(
+                        ".question-checkbox:checked"
+                    )
                 )
-            )
-            .map(
-                function (checkbox) {
+                .map(
+                    function (checkbox) {
 
-                    return JSON.parse(
-                        checkbox.dataset.question
-                    );
+                        return JSON.parse(
+                            checkbox.dataset.question
+                        );
 
-                }
-            );
+                    }
+                );
+
+
+        /*
+ * FREE USER YEAR RESTRICTION
+ *
+ * Free users can select questions
+ * from any year, but they can generate
+ * a QCAB only if all selected questions
+ * are from 2026.
+ */
+
+if (currentAccessLevel === "free") {
+
+    const hasNon2026Question = selectedQuestions.some(
+        function (question) {
+
+            return Number(question.year) !== 2026;
+
+        }
+    );
+
+    if (hasNon2026Question) {
+
+        alert(
+            "Free users can generate QCAB only from 2026 questions."
+        );
+
+         return null;
+
+    }
+}
+
+
+        return selectedQuestions;
 
     };
 
@@ -4639,7 +4746,6 @@ window.getSelectedQuestions =
 })();
 
 </script>
-
 
 <!-- =========================
      PDF GENERATOR
