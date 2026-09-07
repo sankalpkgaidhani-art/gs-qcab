@@ -616,7 +616,7 @@ async function generateQCABPDF(questions) {
 doc.setFontSize(9);
 
 doc.text(
-    "Made by DoomsDay QCAB Generator - cds2gc@gmail.com",
+    "Made by DoomsDay QCAB Generator - for more info contact : cds2gc@gmail.com",
     105,
     288,
     { align: "center" }
