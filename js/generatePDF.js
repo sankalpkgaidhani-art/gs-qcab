@@ -78,26 +78,26 @@ document.getElementById("generateQCAB").addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "https://govhlwqbobforvprdlps.supabase.co/functions/v1/get-questions",
-            {
-                method: "POST",
+    "https://uggewxzqnwjzhebfempx.supabase.co/functions/v1/get-questions",
+    {
+        method: "POST",
 
-                headers: {
-                    "Content-Type": "application/json",
+        headers: {
+            "Content-Type": "application/json",
 
-                    "apikey":
-                        "sb_publishable_lr04EFZActHWsuFS9S24QQ_ryPJMYFM",
+            "apikey":
+                "sb_publishable_xHqv4APZiUkYh0wSDO93zg_7y8_uHjP",
 
-                    "Authorization":
-                        "Bearer " + session.access_token
-                },
+            "Authorization":
+                "Bearer " + session.access_token
+        },
 
-                body: JSON.stringify({
-                    paper: "Paper I",
-                    year: 2026
-                })
-            }
-        );
+        body: JSON.stringify({
+            paper: "Paper I",
+            year: 2026
+        })
+    }
+);
 
         const result = await response.json();
 
@@ -609,6 +609,20 @@ async function generateQCABPDF(questions) {
         }
 
     }
+    // ==========================================
+// FIRST PAGE FOOTER
+// ==========================================
+
+doc.setFontSize(9);
+
+doc.text(
+    "Made by DoomsDay QCAB Generator - cds2gc@gmail.com",
+    105,
+    288,
+    { align: "center" }
+);
+
+doc.setFontSize(22);
 
 
     // ==========================================
@@ -656,6 +670,7 @@ async function generateQCABPDF(questions) {
                 leftMargin - 10,
                 bottomMargin + 3
             );
+            
 
 
             // ==========================================
@@ -753,6 +768,7 @@ async function generateQCABPDF(questions) {
                         5 +
                         splitText.length * 6;
                 }
+                
 
 
                 // ==========================================
