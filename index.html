@@ -1589,17 +1589,40 @@ Upgrade to Premium
    SUPABASE CONFIGURATION
 ========================================= */
 
-// GS Edge Function remains in the GS Supabase project.
+// =========================================
+// GS EDGE FUNCTION
+// =========================================
+
 const API_URL =
     "https://uggewxzqnwjzhebfempx.supabase.co/functions/v1/get-questions";
 
-// CENTRAL AUTHENTICATION
-// This is the Anthropology Supabase project.
-const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_lr04EFZActHWsuFS9S24QQ_ryPJMYFM";
+// =========================================
+// CENTRAL AUTHENTICATION PROJECT
+// =========================================
 
 const SUPABASE_URL =
     "https://govhlwqbobforvprdlps.supabase.co";
+
+// IMPORTANT:
+// Put your ANTHROPOLOGY / CENTRAL Supabase
+// publishable key here.
+
+const SUPABASE_PUBLISHABLE_KEY =
+    "sb_publishable_lr04EFZActHWsuFS9S24QQ_ryPJMYFM";
+
+// =========================================
+// GS PROJECT API KEY
+// =========================================
+//
+// This key is ONLY used when calling the
+// GS Edge Function.
+
+const GS_FUNCTION_API_KEY =
+    "sb_publishable_xHqv4APZiUkYh0wSDO93zg_7y8_uHjP";
+
+// =========================================
+// CENTRAL AUTH CLIENT
+// =========================================
 
 window.supabaseClient =
     supabase.createClient(
@@ -1825,7 +1848,7 @@ async function checkUserAccess() {
                             "application/json",
 
                         "apikey":
-                            SUPABASE_PUBLISHABLE_KEY,
+    GS_FUNCTION_API_KEY,
 
                         "Authorization":
                             "Bearer " +
@@ -2552,7 +2575,7 @@ async function fetchQuestions(filters) {
                             "application/json",
 
                         "apikey":
-                            SUPABASE_PUBLISHABLE_KEY,
+    GS_FUNCTION_API_KEY,
 
                         "Authorization":
                             "Bearer " +
