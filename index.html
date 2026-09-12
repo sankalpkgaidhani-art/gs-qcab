@@ -1019,49 +1019,53 @@ button.danger:hover {
 <label for="loginEmail">Email</label>
 
 <input
-    type="email"
-    id="loginEmail"
-    placeholder="Enter your email"
-    autocomplete="email"
->
+type="email"
+id="loginEmail"
+placeholder="Enter your email"
+autocomplete="email"
+
+
 
 <label for="loginPassword">Password</label>
 
 <input
-    type="password"
-    id="loginPassword"
-    placeholder="Enter your password"
-    autocomplete="current-password"
->
+type="password"
+id="loginPassword"
+placeholder="Enter your password"
+autocomplete="current-password"
+
+
 
 <button
-    id="loginButton"
-    type="button"
-    style="width: 100%;"
->
-    Login
+id="loginButton"
+type="button"
+style="width: 100%;"
+
+
+
+Login
+
 </button>
 
 <div class="auth-links">
 
-    <button
-        id="showSignupButton"
-        type="button"
-    >
-        Create a new account
-    </button>
+<button
+    id="showSignupButton"
+    type="button"
+>
+    Create a new account
+</button>
 
-    <br>
+<br>
 
-    <button
-        id="forgotPasswordButton"
-        type="button"
-    >
-        Forgot password?
-    </button>
+<button
+    id="forgotPasswordButton"
+    type="button"
+>
+    Forgot password?
+</button>
 
 </div>
-
 
 </div>
 
@@ -1071,57 +1075,63 @@ button.danger:hover {
 
 <div id="signupForm" class="hidden">
 
-
 <h3 style="text-align:center;">Create Account</h3>
 
 <label for="signupEmail">Email</label>
 
 <input
-    type="email"
-    id="signupEmail"
-    placeholder="Enter your email"
-    autocomplete="email"
->
+type="email"
+id="signupEmail"
+placeholder="Enter your email"
+autocomplete="email"
+
+
 
 <label for="signupPassword">Password</label>
 
 <input
-    type="password"
-    id="signupPassword"
-    placeholder="Create a password"
-    autocomplete="new-password"
->
+type="password"
+id="signupPassword"
+placeholder="Create a password"
+autocomplete="new-password"
+
+
 
 <button
-    id="signupButton"
-    type="button"
-    style="width: 100%;"
->
-    Create Account
+id="signupButton"
+type="button"
+style="width: 100%;"
+
+
+
+Create Account
+
 </button>
 
 <div class="auth-links">
 
-    <button
-        id="backToLoginButton"
-        type="button"
-    >
-        Already have an account? Login
-    </button>
+<button
+    id="backToLoginButton"
+    type="button"
+>
+    Already have an account? Login
+</button>
 
 </div>
-
 
 </div>
 
 <p id="loginMessage"></p>
 
 <button
-    id="backToMainButton"
-    type="button"
-    onclick="window.location.href='https://sankalpkgaidhani-art.github.io/main-page/';"
->
-    ← Back to Main Page
+id="backToMainButton"
+type="button"
+onclick="window.location.href='https://sankalpkgaidhani-art.github.io/main-page/';"
+
+
+
+← Back to Main Page
+
 </button>
 
 </div>
@@ -1136,11 +1146,9 @@ type="button"
 onclick="window.location.href='premium.html';"
 style="display: none;"
 
->
 
 
 Upgrade to Premium
-
 
 </button>
 
@@ -1150,7 +1158,6 @@ Upgrade to Premium
 
 <div id="logoutContainer" style="display: none;">
 
-
 <button id="logoutButton" type="button">
     Logout
 </button>
@@ -1158,7 +1165,6 @@ Upgrade to Premium
 <div class="creator-credit">
     Made by Sankalp10_04
 </div>
-
 
 </div>
 
@@ -1173,13 +1179,11 @@ Upgrade to Premium
 
 <div class="container">
 
-
 <h1>GS QCAB Generator</h1>
 
 <p class="subtitle">
     Generate UPSC GS Question-Cum-Answer Booklets
 </p>
-
 
 <!-- =========================
      PLAN MESSAGE
@@ -1191,35 +1195,33 @@ Upgrade to Premium
     style="display: none;"
 ></div>
 
-
 <!-- MODE -->
 
 <div class="card">
 
-    <h3>Selection Mode</h3>
+<h3>Selection Mode</h3>
 
-    <div class="mode-row">
+<div class="mode-row">
 
-        <button
-            id="topicModeButton"
-            class="mode-button active"
-            type="button"
-        >
-            Topic-wise
-        </button>
+    <button
+        id="topicModeButton"
+        class="mode-button active"
+        type="button"
+    >
+        Topic-wise
+    </button>
 
-        <button
-            id="yearModeButton"
-            class="mode-button"
-            type="button"
-        >
-            Year-wise
-        </button>
-
-    </div>
+    <button
+        id="yearModeButton"
+        class="mode-button"
+        type="button"
+    >
+        Year-wise
+    </button>
 
 </div>
 
+</div>
 
 <!-- FILTERS -->
 
@@ -1228,84 +1230,83 @@ Upgrade to Premium
     id="filterCard"
 >
 
-    <h3>Choose Questions</h3>
+<h3>Choose Questions</h3>
 
-    <label for="paperSelect">
-        GS Paper
+<label for="paperSelect">
+    GS Paper
+</label>
+
+<select id="paperSelect">
+
+    <option value="">
+        Select Paper
+    </option>
+
+    <option value="GS1">
+        GS1
+    </option>
+
+    <option value="GS2">
+        GS2
+    </option>
+
+    <option value="GS3">
+        GS3
+    </option>
+
+</select>
+
+
+<!-- TOPIC FILTER -->
+
+<div id="topicSection">
+
+    <label for="topicSelect">
+        Topic
     </label>
 
-    <select id="paperSelect">
+    <select id="topicSelect">
 
         <option value="">
-            Select Paper
-        </option>
-
-        <option value="GS1">
-            GS1
-        </option>
-
-        <option value="GS2">
-            GS2
-        </option>
-
-        <option value="GS3">
-            GS3
+            Select Topic
         </option>
 
     </select>
 
-
-    <!-- TOPIC FILTER -->
-
-    <div id="topicSection">
-
-        <label for="topicSelect">
-            Topic
-        </label>
-
-        <select id="topicSelect">
-
-            <option value="">
-                Select Topic
-            </option>
-
-        </select>
-
-    </div>
+</div>
 
 
-    <!-- YEAR FILTER -->
+<!-- YEAR FILTER -->
 
-    <div id="yearSection">
+<div id="yearSection">
 
-        <label for="yearSelect">
-            Year
-        </label>
+    <label for="yearSelect">
+        Year
+    </label>
 
-        <select id="yearSelect">
+    <select id="yearSelect">
 
-            <option value="">
-                Select Year
-            </option>
+        <option value="">
+            Select Year
+        </option>
 
-        </select>
-
-    </div>
-
-
-    <div class="button-row">
-
-        <button
-            id="loadQuestions"
-            type="button"
-        >
-            Load Questions
-        </button>
-
-    </div>
+    </select>
 
 </div>
 
+
+<div class="button-row">
+
+    <button
+        id="loadQuestions"
+        type="button"
+    >
+        Load Questions
+    </button>
+
+</div>
+
+</div>
 
 <!-- QUESTIONS -->
 
@@ -1315,39 +1316,38 @@ Upgrade to Premium
     style="display:none;"
 >
 
-    <h3>Select Questions</h3>
+<h3>Select Questions</h3>
 
-    <div class="button-row">
+<div class="button-row">
 
-        <button
-            id="selectAll"
-            type="button"
-        >
-            Select All
-        </button>
-
-        <button
-            id="clearAll"
-            type="button"
-            class="secondary"
-        >
-            Clear All
-        </button>
-
-    </div>
-
-
-    <div
-        id="selectedCount"
-        class="selected-count"
+    <button
+        id="selectAll"
+        type="button"
     >
-        Selected: 0
-    </div>
+        Select All
+    </button>
 
-    <div id="questionsList"></div>
+    <button
+        id="clearAll"
+        type="button"
+        class="secondary"
+    >
+        Clear All
+    </button>
 
 </div>
 
+
+<div
+    id="selectedCount"
+    class="selected-count"
+>
+    Selected: 0
+</div>
+
+<div id="questionsList"></div>
+
+</div>
 
 <!-- =========================
      CUSTOM QUESTIONS
@@ -1359,174 +1359,173 @@ Upgrade to Premium
     style="display:none;"
 >
 
-    <h3>Add Your Own Questions</h3>
+<h3>Add Your Own Questions</h3>
 
-    <div class="custom-question-panel">
+<div class="custom-question-panel">
 
-        <form id="customQuestionForm" novalidate>
+    <form id="customQuestionForm" novalidate>
 
-            <div class="custom-field">
+        <div class="custom-field">
 
-                <label for="customQuestionText">
-                    Question
-                </label>
-
-                <div
-                    class="custom-editor-toolbar"
-                    role="toolbar"
-                    aria-label="Question tools"
-                >
-
-                    <button
-                        type="button"
-                        id="clearQuestionButton"
-                        class="custom-toolbar-button"
-                    >
-                        Clear
-                    </button>
-
-                    <span class="custom-toolbar-help">
-                        Type text or paste text and images directly into the question box.
-                    </span>
-
-                </div>
-
-                <div
-                    id="customQuestionText"
-                    class="custom-rich-editor"
-                    contenteditable="true"
-                    role="textbox"
-                    aria-multiline="true"
-                    data-placeholder="Enter your question...type text or paste text and images directly into the question box."
-                ></div>
-
-            </div>
-
-
-            <div class="custom-fields-row">
-
-                <div class="custom-field">
-
-                    <label for="customMarks">
-                        Marks
-                    </label>
-
-                    <input
-                        id="customMarks"
-                        type="number"
-                        min="1"
-                        max="1000"
-                        step="1"
-                        value="10"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="custom-field">
-
-                    <label for="customPages">
-                        Answer Pages
-                    </label>
-
-                    <input
-                        id="customPages"
-                        type="number"
-                        min="1"
-                        max="100"
-                        step="1"
-                        value="2"
-                        required
-                    >
-
-                    <small>
-                        Exact answer space in the PDF.
-                    </small>
-
-                </div>
-
-
-                <div class="custom-field">
-
-                    <label for="customWordLimit">
-                        Word Limit <span>(optional)</span>
-                    </label>
-
-                    <input
-                        id="customWordLimit"
-                        type="number"
-                        min="1"
-                        max="10000"
-                        step="1"
-                        placeholder="e.g. 150"
-                    >
-
-                </div>
-
-            </div>
-
+            <label for="customQuestionText">
+                Question
+            </label>
 
             <div
-                id="customQuestionError"
-                class="custom-error"
-                role="alert"
-            ></div>
-
-
-            <div class="custom-form-actions">
-
-                <button
-                    type="submit"
-                    id="addCustomQuestion"
-                    class="custom-primary-button"
-                >
-                    + Add Question
-                </button>
+                class="custom-editor-toolbar"
+                role="toolbar"
+                aria-label="Question tools"
+            >
 
                 <button
                     type="button"
-                    id="cancelCustomEdit"
-                    class="custom-secondary-button"
-                    style="display:none;"
+                    id="clearQuestionButton"
+                    class="custom-toolbar-button"
                 >
-                    Cancel
+                    Clear
                 </button>
 
-            </div>
-
-        </form>
-
-
-        <div class="custom-question-list">
-
-            <div class="custom-list-header">
-
-                <div>
-
-                    <h3>Your Questions</h3>
-
-                    <span id="customQuestionCount">
-                        0 questions
-                    </span>
-
-                </div>
-
-                <div
-                    id="customTotals"
-                    class="custom-totals"
-                ></div>
+                <span class="custom-toolbar-help">
+                    Type text or paste text and images directly into the question box.
+                </span>
 
             </div>
 
-            <div id="customQuestionItems"></div>
+            <div
+                id="customQuestionText"
+                class="custom-rich-editor"
+                contenteditable="true"
+                role="textbox"
+                aria-multiline="true"
+                data-placeholder="Enter your question...type text or paste text and images directly into the question box."
+            ></div>
 
         </div>
+
+
+        <div class="custom-fields-row">
+
+            <div class="custom-field">
+
+                <label for="customMarks">
+                    Marks
+                </label>
+
+                <input
+                    id="customMarks"
+                    type="number"
+                    min="1"
+                    max="1000"
+                    step="1"
+                    value="10"
+                    required
+                >
+
+            </div>
+
+
+            <div class="custom-field">
+
+                <label for="customPages">
+                    Answer Pages
+                </label>
+
+                <input
+                    id="customPages"
+                    type="number"
+                    min="1"
+                    max="100"
+                    step="1"
+                    value="2"
+                    required
+                >
+
+                <small>
+                    Exact answer space in the PDF.
+                </small>
+
+            </div>
+
+
+            <div class="custom-field">
+
+                <label for="customWordLimit">
+                    Word Limit <span>(optional)</span>
+                </label>
+
+                <input
+                    id="customWordLimit"
+                    type="number"
+                    min="1"
+                    max="10000"
+                    step="1"
+                    placeholder="e.g. 150"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="customQuestionError"
+            class="custom-error"
+            role="alert"
+        ></div>
+
+
+        <div class="custom-form-actions">
+
+            <button
+                type="submit"
+                id="addCustomQuestion"
+                class="custom-primary-button"
+            >
+                + Add Question
+            </button>
+
+            <button
+                type="button"
+                id="cancelCustomEdit"
+                class="custom-secondary-button"
+                style="display:none;"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <div class="custom-question-list">
+
+        <div class="custom-list-header">
+
+            <div>
+
+                <h3>Your Questions</h3>
+
+                <span id="customQuestionCount">
+                    0 questions
+                </span>
+
+            </div>
+
+            <div
+                id="customTotals"
+                class="custom-totals"
+            ></div>
+
+        </div>
+
+        <div id="customQuestionItems"></div>
 
     </div>
 
 </div>
 
+</div>
 
 <!-- GENERATE -->
 
@@ -1536,34 +1535,33 @@ Upgrade to Premium
     style="display:none;"
 >
 
-    <h3>Generate QCAB</h3>
+<h3>Generate QCAB</h3>
 
-    <p id="generateDescription">
-        Generate a PDF containing the selected questions
-        followed by answer-writing pages.
-    </p>
+<p id="generateDescription">
+    Generate a PDF containing the selected questions
+    followed by answer-writing pages.
+</p>
+
+<button
+    id="generateQCAB"
+    type="button"
+>
+    Generate QCAB PDF
+</button>
+
+<div style="margin-top:15px;">
 
     <button
-        id="generateQCAB"
+        id="downloadQCAB"
         type="button"
+        style="display:none;"
     >
-        Generate QCAB PDF
+        Download QCAB PDF
     </button>
-
-    <div style="margin-top:15px;">
-
-        <button
-            id="downloadQCAB"
-            type="button"
-            style="display:none;"
-        >
-            Download QCAB PDF
-        </button>
-
-    </div>
 
 </div>
 
+</div>
 
 </div>
 
@@ -1589,40 +1587,14 @@ Upgrade to Premium
    SUPABASE CONFIGURATION
 ========================================= */
 
-// =========================================
-// GS EDGE FUNCTION
-// =========================================
-
 const API_URL =
     "https://uggewxzqnwjzhebfempx.supabase.co/functions/v1/get-questions";
 
-// =========================================
-// CENTRAL AUTHENTICATION PROJECT
-// =========================================
-
-const SUPABASE_URL =
-    "https://govhlwqbobforvprdlps.supabase.co";
-
-// IMPORTANT:
-// Put your ANTHROPOLOGY / CENTRAL Supabase
-// publishable key here.
-
 const SUPABASE_PUBLISHABLE_KEY =
-    "sb_publishable_lr04EFZActHWsuFS9S24QQ_ryPJMYFM";
-
-// =========================================
-// GS PROJECT API KEY
-// =========================================
-//
-// This key is ONLY used when calling the
-// GS Edge Function.
-
-const GS_FUNCTION_API_KEY =
     "sb_publishable_xHqv4APZiUkYh0wSDO93zg_7y8_uHjP";
 
-// =========================================
-// CENTRAL AUTH CLIENT
-// =========================================
+const SUPABASE_URL =
+    "https://uggewxzqnwjzhebfempx.supabase.co";
 
 window.supabaseClient =
     supabase.createClient(
@@ -1848,7 +1820,7 @@ async function checkUserAccess() {
                             "application/json",
 
                         "apikey":
-    GS_FUNCTION_API_KEY,
+                            SUPABASE_PUBLISHABLE_KEY,
 
                         "Authorization":
                             "Bearer " +
@@ -2575,7 +2547,7 @@ async function fetchQuestions(filters) {
                             "application/json",
 
                         "apikey":
-    GS_FUNCTION_API_KEY,
+                            SUPABASE_PUBLISHABLE_KEY,
 
                         "Authorization":
                             "Bearer " +
